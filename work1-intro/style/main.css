@@ -1,3 +1,13 @@
+
+:root {
+    --blue: rgb(49, 133, 252);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --grey: rgba(0, 0, 0, 0.5);
+    --bg-font: rgb(59 130 246 / .2);
+    --font: rgb(6, 31, 80);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +15,9 @@
 }
 
 body {
-    background-color: rgba(229, 231, 235, 0.1);
+    background-color: var(--white);
     font-family: Arial, sans-serif;
+    color: var(--font);
 }
 
 .container  {
@@ -18,13 +29,18 @@ body {
 /* Header */
 
 header {
-    background-color: bisque;
+    background-color: var(--white);
 }
 
 .logo {
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin: auto .1rem;
 
     a {
         text-decoration: none;
+        color: var(--font);
+        font-weight: 600;
     }
 }
 
@@ -33,6 +49,7 @@ header {
     justify-content: space-between;
     height: 60px;
     align-items: center;
+
 }
 
 .menu {
@@ -41,12 +58,28 @@ header {
 
 
     li {
+        padding: 1rem;
+        border-radius: 0.8rem;
+        margin: auto .1rem;
         
         a {
             text-decoration: none;
+            color: var(--font);
         }
     }
 }
+
+/* nav animated */
+.menu li:hover {
+    background-color: var(--bg-font);
+    cursor: pointer;
+}
+
+.logo:hover {
+    background-color: var(--bg-font);
+    cursor: pointer;
+}
+
 
 /* main */
 main {
@@ -56,6 +89,10 @@ main {
 /* Footer */
 footer {
     text-align: center;
-    background-color: blanchedalmond;
     padding: 2rem;
+
+    p {
+        color: var(--black);
+        opacity: 0.5;
+    }
 }
