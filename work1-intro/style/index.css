@@ -2,11 +2,11 @@
 
 .content {
     text-align: center;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: 75vh;
-    margin: 0 auto;
-    position: relative;
-    top: 10rem;
+    display: flex;
 }
 
 .content-head {
