@@ -2,6 +2,7 @@
 :root {
     --blue: rgb(49, 133, 252);
     --white: rgb(255, 255, 255);
+    --bg-white: rgb(243, 248, 251);
     --black: rgb(0, 0, 0);
     --grey: rgba(0, 0, 0, 0.5);
     --bg-font: rgb(59 130 246 / .2);
@@ -15,7 +16,7 @@
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--bg-white);
     font-family: Arial, sans-serif;
     color: var(--font);
 }
@@ -29,7 +30,7 @@ body {
 /* Header */
 
 header {
-    background-color: var(--white);
+    background-color: var(--bg-white);
 }
 
 .logo {
