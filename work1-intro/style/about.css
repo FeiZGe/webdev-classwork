@@ -1,27 +1,48 @@
 @import "main.css";
 
-.con-about-content {
-    margin: auto 1.5rem;
-}
-
-.about-edu {
-    justify-content: center;
-    align-items: center;
+/* about container */
+.con-about {
     display: flex;
-    margin: 2rem auto;
+    justify-content: space-evenly;
+
+    .head {
+        color: var(--blue);
+    }
+
+    .sub-head {
+        font-size: 3rem;
+    }
 }
 
-.edu-table {
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: .7rem;
-    padding: 1.2rem;
-    width: 20vw;
-    height: 20vh;
+/* === START content right === */
+.con-about-photo {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+/* === END content right === */
 
-    table {
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-    }
+/* === START content left === */
+.con-about-content {
+    border: solid;
+    border-color: aqua;
+    width: 40%;
+}
+
+.about-content {
+    margin: 1.5rem auto;
+    display: flex;
+
+}
+
+.left-about {
+    
+}
+
+.right-about {
+    
+}
+/* === END content left === */
+
+/* download CV */
+.about-btn {
+    margin: 0;
 }

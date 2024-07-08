@@ -3,7 +3,6 @@
     --blue: rgb(49, 133, 252);
     --white: rgb(255, 255, 255);
     --bg-white: rgb(243, 248, 251);
-    --black: rgb(0, 0, 0);
     --grey: rgba(0, 0, 0, 0.5);
     --bg-font: rgb(59 130 246 / .2);
     --font: rgb(6, 31, 80);
@@ -34,11 +33,11 @@ header {
 }
 
 .logo {
-    padding: 1rem;
-    border-radius: 0.8rem;
     margin: auto .1rem;
 
     a {
+        padding: 1rem;
+        border-radius: 0.8rem;
         text-decoration: none;
         color: var(--font);
         font-weight: 600;
@@ -59,11 +58,11 @@ header {
 
 
     li {
-        padding: 1rem;
-        border-radius: 0.8rem;
         margin: auto .1rem;
         
         a {
+            padding: 1rem;
+            border-radius: 0.8rem;
             text-decoration: none;
             color: var(--font);
         }
@@ -71,12 +70,12 @@ header {
 }
 
 /* nav animated */
-.menu li:hover {
+.menu li>a:hover {
     background-color: var(--bg-font);
     cursor: pointer;
 }
 
-.logo:hover {
+.logo a:hover {
     background-color: var(--bg-font);
     cursor: pointer;
 }
@@ -93,7 +92,30 @@ footer {
     padding: 1.5rem;
 
     p {
-        color: var(--black);
+        color: var(--font);
         opacity: 0.4;
     }
+}
+
+/* Button */
+.btn {
+    text-decoration: none;
+    border-style: none;
+    background-color: var(--blue);
+    padding: .8rem;
+    border-radius: 10px;
+    color: var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* animated */
+.btn:hover {
+    background-color: var(--white);
+    color: var(--font);
+    border-style: solid;
+    border-color: var(--blue);
+}
+
+.btn:focus {
+    background-color: var(--blue);
 }
