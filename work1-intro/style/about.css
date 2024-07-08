@@ -22,23 +22,27 @@
 
 /* === START content left === */
 .con-about-content {
-    border: solid;
-    border-color: aqua;
     width: 40%;
 }
 
 .about-content {
     margin: 1.5rem auto;
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .left-about {
-    
+    display: grid;
+    gap: 15px;
 }
 
 .right-about {
-    
+    display: grid;
+    gap: 15px;
+}
+
+.about-list > h4{
+    margin-bottom: 3px;
 }
 /* === END content left === */
 
