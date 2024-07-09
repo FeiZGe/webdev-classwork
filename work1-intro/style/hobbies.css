@@ -1,0 +1,45 @@
+@import "main.css";
+
+.show {
+    height: 70svh;
+    align-content: center;
+}
+
+/* grid */
+.hobby-grid {
+    margin: 0 6.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/* card */
+.hobby-item {
+    width: 195px;
+    height: 268px;
+    border-radius: 20px;
+    transition: all .3s;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    text-align: center;
+    align-content: center;
+
+    .hobby-item-icon {
+        padding: .5rem;
+    }
+
+    .hobby-item-name {
+        padding: .5rem;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+}
+
+.hobby-item:hover {
+    background-color: var(--blue);
+    box-shadow: 0px 0px 30px 1px var(--blue);
+    color: var(--white);
+    transition: 0.5s;
+}

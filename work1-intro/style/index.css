@@ -16,7 +16,7 @@
     span {
         background: linear-gradient(to right, #2519f2,#cf23cf, #eedd44);
         -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+        background-clip: text;
     }
 }
 

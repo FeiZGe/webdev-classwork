@@ -16,7 +16,7 @@
 
 body {
     background-color: var(--bg-white);
-    font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
     color: var(--font);
 }
 
