@@ -1,50 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- META TAGS -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- TITILE -->
     <title>Contact</title>
 
     <!-- Link -->
-    <link rel="stylesheet" href="./style/contact.css">
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/contact.css" />
+    <link rel="stylesheet" href="./style/main.css" />
     <!-- font-awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- === Header Zone === -->
     <header>
-        <nav class="container">
-            <div class="nav-con">
-                <div class="logo">
-                    <a href="./">Thanapat</a>
-                </div>
-                <div class="menu" id="navMenu">
-                    <li><a href="./">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./hobbies.html">Hobbies</a></li>
-                    <li><a href="./skills.html">Skills</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </div>
-                <div class="ham-menu" onclick="toggleHam(this)">
-                  <div class="bar1"></div>
-                  <div class="bar2"></div>
-                  <div class="bar3"></div>
-                </div>
-            </div>
-        </nav>
-     </header>
+      <nav class="container">
+        <div class="nav-con">
+          <div class="logo">
+            <a href="./">Thanapat</a>
+          </div>
+          <div class="menu" id="navMenu">
+            <li><a href="./">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./hobbies.html">Hobbies</a></li>
+            <li><a href="./skills.html">Skills</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </div>
+          <div class="ham-menu" onclick="toggleHam(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <!-- === Header Zone === -->
 
     <!-- === Main Zone === -->
+    <main>
+      <div class="container">
+        <div class="contact-con">
+          <section class="social">
+            <article class="social-icon github">
+              <a href="https://github.com/FeiZGe" target="_blank">
+                <i class="fa-brands fa-github fa-3x"></i>
+              </a>
+            </article>
+            <article class="social-icon linkedin">
+              <a href="https://www.linkedin.com/in/thanapat-n/" target="_blank">
+                <i class="fa-brands fa-linkedin fa-3x"></i>
+              </a>
+            </article>
+          </section>
+          <section class="contact-form">
+            <form action="#">
+              <div class="form-con">
+                <h2>Let's break the ice!</h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis voluptatem dolore ea aperiam quibusdam porro eos,
+                  atque mollitia molestias ad.
+                </p>
+                <hr />
+                
+                <div class="form-con-field">
+                  <label for="Fname"><b>Firstname</b></label>
+                  <input
+                    type="text"
+                    placeholder="Firstname"
+                    name="Fname"
+                    id="Fname"
+                    required
+                  />
+
+                  <label for="Lname"><b>Lastname</b></label>
+                  <input
+                    type="text"
+                    placeholder="Lastname"
+                    name="Lname"
+                    id="Lname"
+                    required
+                  />
+
+                  <label for="email"><b>Email</b></label>
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    name="email"
+                    id="email"
+                    required
+                  />
+
+                  <label for="Pnum"><b>Phone number</b></label>
+                  <input
+                    type="text"
+                    placeholder="Phone number"
+                    name="Pnum"
+                    id="Pnum"
+                    required
+                  />
+
+                  <label for="msg"><b>Message</b></label>
+                  <input
+                    type="text"
+                    placeholder="Message"
+                    name="msg"
+                    id="msg"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn">Send message</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
     <!-- === Main Zone === -->
-     
+
     <!-- === Footer Zone === -->
+    <footer>
+      <p>&copy; 2024 FeiZGe.</p>
+    </footer>
     <!-- === Footer Zone === -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,47 @@
+@import "main.css";
+
+.contact-con {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+/* social */
+.social {
+  display: flex;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.social a {
+  color: var(--font);
+}
+
+.social a:hover {
+  color: var(--blue);
+}
+
+/* Contact Form */
+.form-con {
+  background-color: bisque;
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+/* Full-width input fields */
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: var(--bg-white);
+  border-radius: 8px;
+}
+
+input[type="text"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
