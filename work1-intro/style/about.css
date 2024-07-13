@@ -1,9 +1,15 @@
 @import "main.css";
 
-/* about container */
 .con-about {
-    display: flex;
-    justify-content: space-evenly;
+    margin: auto 1rem;
+}
+
+/* about grid */
+.con-about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2.5rem;
 
     .head {
         color: var(--blue);
@@ -17,18 +23,27 @@
 /* === START content right === */
 .con-about-photo {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: aqua;
+    height: 500px;
+    width: 500px;
+}
+
+.con-about-photo img {
+    height: 250px;
+    width: 250px;
 }
 /* === END content right === */
 
 /* === START content left === */
 .con-about-content {
-    width: 40%;
+    width: 100%;
 }
 
 .about-content {
     margin: 1.5rem auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .left-about {
@@ -41,7 +56,7 @@
     gap: 15px;
 }
 
-.about-list > h4{
+.about-list h4{
     margin-bottom: 3px;
 }
 /* === END content left === */
@@ -49,4 +64,9 @@
 /* download CV */
 .about-btn {
     margin: 0;
+}
+
+/* Reponsive */
+@media only screen and (max-width:){
+    
 }
