@@ -14,7 +14,7 @@
     margin: 0 auto;
 
     span {
-        background: linear-gradient(to right, #2519f2,#cf23cf, #eedd44);
+        background: linear-gradient(130deg, rgba(7,4,71,1) 0%, rgba(9,9,134,1) 31%, rgba(8,154,255,1) 100%);
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
