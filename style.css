@@ -76,51 +76,95 @@ main {
 }
 
 /* card */
-.card {
-    margin: 0 6.5rem;
+.card-container {
+    margin: 0 1rem;
+}
+
+.card-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
     justify-items: center;
     align-items: center;
 }
 
 .item {
-    width: 190px;
-    height: 254px;
     border-radius: 20px;
-    transition: all .3s;
+    transition: all .3s ease;
     background-color: var(--bg-white);
     box-shadow: 15px 15px 30px rgb(220, 231, 237),
              -15px -15px 30px var(--bg-white);
     text-decoration: none;
     color: var(--font);
-    align-content: center;
-    justify-items: center;
+    padding: 2rem 1rem;
     text-align: center;
+}
 
-    .item-number {
-        font-family: "Noto Sans", sans-serif;
-        width: 50px;
-        height: 50px;
-        padding: 10px 10px;
-        background-color: var(--blue);
-        color: var(--white);
-        text-align: center;
-        align-content: center;
-        border-radius: 10px;
-        margin: 0 auto;
-    }
+.item-content {
+    margin-top: .5rem;
 
-    .item-detail {
+    .item-titile {
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin: 0 auto;
     }
+    
+    .item-detail {
+        margin-top: .2rem;
+        font-size: 1rem;
+    }
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
 }
 
 .item:hover {
     box-shadow: 0px 0px 30px 1px rgba(49, 133, 252, 0.30);
+    transition: all .3s ease;
+    transform: translateY(-.3rem);
+}
+
+/* Responsive */
+@media only screen and (max-width: 580px){
+    .titile{
+        .titile-head h1 {
+            font-size: 3rem;
+        }
+    
+        .titile-sub h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .item img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .titile {
+        .titile-head h1 {
+            font-size: 2.5rem;
+        }
+    
+        .titile-sub h2 {
+            font-size: 1rem;
+        }
+    }
+
+    .item-content {
+
+        .item-titile {
+            font-size: 1.7rem;
+        }
+
+        .item-detail {
+            font-size: .9rem;
+        }
+    }
 }
 
 /* === Main Zone === */
