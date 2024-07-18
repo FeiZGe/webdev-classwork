@@ -1,5 +1,9 @@
 @import "main.css";
 
+.about-page {
+    padding-top: 4rem;
+}
+
 .con-about {
     margin: auto 2rem;
 }
