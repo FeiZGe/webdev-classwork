@@ -1,0 +1,93 @@
+@import "main.css";
+
+/* card skill */
+.card-skills {
+    background-color: var(--white);
+    border-radius: 10px;
+    height: 220px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    margin: 4rem 1rem;
+}
+
+.skill-titile {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* infinite scroll animate */
+.wrapper {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin: 2rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.skill {
+  width: 200px;
+  height: 100px;
+  background-color: var(--bg-white);
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(200px * 8), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  text-align: center;
+  align-content: center;
+}
+
+.skill1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.skill2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.skill3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.skill4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.skill5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.skill6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.skill7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.skill8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+/* skill detail */
+.skill img {
+    width: 80px;
+    height: 80px;
+}

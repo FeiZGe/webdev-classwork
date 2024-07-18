@@ -1,0 +1,110 @@
+@import "main.css";
+
+.con-about {
+    margin: auto 2rem;
+}
+
+/* about grid */
+.con-about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2.5rem;
+
+    .head {
+        color: var(--blue);
+    }
+
+    .sub-head {
+        font-size: 3rem;
+    }
+}
+
+/* === START content right === */
+.con-about-photo {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: var(--white);
+    border-radius: 15px;
+    align-content: center;
+    text-align: center;
+}
+
+.con-about-photo img {
+    height: 500px;
+    width: 500px;
+}
+/* === END content right === */
+
+/* === START content left === */
+.con-about-content {
+    width: 100%;
+}
+
+.about-content {
+    margin: 1.5rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.left-about {
+    display: grid;
+    gap: 15px;
+}
+
+.right-about {
+    display: grid;
+    gap: 15px;
+}
+
+.about-list h4{
+    margin-bottom: 3px;
+}
+/* === END content left === */
+
+/* download CV */
+.about-btn {
+    margin: 0;
+}
+
+/* table */
+.table-card {
+    background-color: var(--white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+
+    h4 {
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+    }
+
+    table {
+        width: 100%;
+        border-spacing: .5rem;
+
+        th, td {
+            padding: .5rem;
+            background-color: var(--bg-font);
+            border-radius: 10px;
+        }
+
+        td {
+            text-align: center;
+        }
+    }
+}
+
+/* Reponsive */
+@media (max-width: 850px) {
+    .con-about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .con-about-photo img {
+        height: 300px;
+        width: 300px;
+    }
+}

@@ -1,0 +1,76 @@
+@import "main.css";
+
+.contact-w {
+    margin: auto 1rem;
+}
+
+.contact-con {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+/* social */
+.social {
+  display: flex;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.social a {
+  color: var(--font);
+}
+
+.social a:hover {
+  color: var(--blue);
+}
+
+/* Contact Form */
+.form-con {
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  h2 {
+    color: var(--blue);
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.contact-con-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+
+/* Full-width input fields */
+input[type="text"], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 15px 0;
+  display: inline-block;
+  border: none;
+  background: var(--bg-white);
+  border-radius: 8px;
+}
+
+/* Reposive */
+@media only screen and  (max-width: 768px){
+  .contact-con {
+    grid-template-columns: 1fr;
+  }
+
+  .form-con {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
