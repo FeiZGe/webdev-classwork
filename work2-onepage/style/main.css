@@ -32,7 +32,7 @@ header {
 
 /* nav bar */
 .logo {
-  margin: 0 0.1rem;
+  margin-left: 1rem;
 
   a {
     padding: 1rem;
@@ -47,14 +47,20 @@ header {
   display: flex;
   justify-content: space-between;
   height: 60px;
+  width: 100%;
+  background-color: rgba(243, 248, 251,0.4);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 20 50 rgba(0, 0, 0, 0.15);
   align-items: center;
-  margin: 0 1rem;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 .menu {
   display: flex;
   list-style: none;
+  margin-right: 1rem;
 
   li {
     margin: auto 0.1rem;
