@@ -119,6 +119,19 @@ main {
         margin-top: .2rem;
         font-size: 1rem;
     }
+
+    .btn {
+        text-decoration: none;
+        background-color: var(--blue);
+        color: white;
+        padding: .2rem .6rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: blue;
+    }
 }
 
 .item img {
