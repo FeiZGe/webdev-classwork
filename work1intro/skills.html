@@ -11,10 +11,301 @@
     <title>Skills</title>
 
     <!-- LINK -->
-    <link rel="stylesheet" href="./style/skills.css">
-    <link rel="stylesheet" href="./style/main.css">
-    <!-- font-awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <style>
+        :root {
+          --blue: rgb(49, 133, 252);
+          --white: rgb(255, 255, 255);
+          --bg-white: rgb(243, 248, 251);
+          --grey: rgba(0, 0, 0, 0.5);
+          --bg-font: rgb(59 130 246 / 0.2);
+          --font: rgb(6, 31, 80);
+        }
+        
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+  
+        body {
+          background-color: var(--bg-white);
+          font-family: "Inter", sans-serif;
+          color: var(--font);
+        }
+  
+        .container {
+          max-width: 1140px;
+          margin: 0 auto;
+        }
+  
+        /* Header */
+  
+        header {
+          background-color: var(--bg-white);
+        }
+  
+        /* nav bar */
+        .logo {
+          margin: 0 0.1rem;
+  
+          a {
+            padding: 1rem;
+            border-radius: 0.8rem;
+            text-decoration: none;
+            color: var(--font);
+            font-weight: 600;
+          }
+        }
+  
+        .nav-con {
+          display: flex;
+          justify-content: space-between;
+          height: 60px;
+          align-items: center;
+          margin: 0 1rem;
+          position: relative;
+        }
+  
+        .menu {
+          display: flex;
+          list-style: none;
+  
+          li {
+            margin: auto 0.1rem;
+  
+            a {
+              padding: 1rem;
+              border-radius: 0.8rem;
+              text-decoration: none;
+              color: var(--font);
+              transition: all .3s ease;
+            }
+          }
+        }
+  
+        /* nav animated */
+        .menu li a:hover {
+          background-color: var(--bg-font);
+          cursor: pointer;
+        }
+  
+        .logo a:hover {
+          background-color: var(--bg-font);
+          cursor: pointer;
+        }
+  
+        /* responsive navbar */
+        .ham-menu {
+          display: inline-block;
+          cursor: pointer;
+          position: absolute;
+          right: 0;
+          top: .5rem;
+        }
+  
+        .bar1,
+        .bar2,
+        .bar3 {
+          width: 25px;
+          height: 4px;
+          border-radius: 10px;
+          background-color: var(--font);
+          margin: 6px 0;
+          transition: 0.4s;
+        }
+  
+        /* Rotate first bar */
+        .change .bar1 {
+          transform: translate(0, 10px) rotate(-45deg);
+        }
+  
+        /* Fade out the second bar */
+        .change .bar2 {
+          opacity: 0;
+        }
+  
+        /* Rotate last bar */
+        .change .bar3 {
+          transform: translate(0, -10px) rotate(45deg);
+        }
+  
+        @media only screen and (min-width: 630px) {
+            .ham-menu {
+                display: none;
+            }
+        }
+  
+        @media only screen and (max-width: 630px) {
+            .menu {
+                display: none;
+                background-color: var(--blue);
+                width: 100%;
+                border-radius: 10px;
+                margin: 1rem 0;
+            }
+  
+            .menu li {
+                margin: 1.5rem 0;
+            }
+  
+            .menu li a {
+                color: white;
+                margin: 0 .5rem;
+            }
+  
+            .menu li a:hover {
+                background-color: white;
+                color: var(--font);
+            }
+  
+            .menu-active {
+                display: block;
+            }
+  
+            .nav-con {
+                height: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.2rem;
+            }
+        }
+  
+        /* main */
+        main {
+          padding: 2rem 0;
+        }
+  
+        /* Footer */
+        footer {
+          text-align: center;
+          padding: 1.5rem;
+  
+          p {
+            color: var(--font);
+            opacity: 0.4;
+          }
+        }
+  
+        /* Button */
+        .btn {
+          text-decoration: none;
+          border-style: none;
+          background-color: var(--blue);
+          padding: 0.8rem;
+          border-radius: 10px;
+          color: var(--white);
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          cursor: pointer;
+        }
+  
+        /* animated */
+        .btn:hover {
+          background-color: var(--white);
+          color: var(--font);
+          border-style: solid;
+          border-color: var(--blue);
+        }
+  
+        .btn:focus {
+          background-color: var(--blue);
+        }
+        
+        /* card skill */
+        .card-skills {
+            background-color: var(--white);
+            border-radius: 10px;
+            height: 220px;
+            padding: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            margin: 4rem 1rem;
+        }
+
+        .skill-titile {
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        /* infinite scroll animate */
+        .wrapper {
+          width: 90%;
+          max-width: 1536px;
+          margin-inline: auto;
+          position: relative;
+          height: 100px;
+          margin: 2rem;
+          overflow: hidden;
+          mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0)
+          );
+        }
+
+        @keyframes scrollLeft {
+          to {
+            left: -200px;
+          }
+        }
+
+        .skill {
+          width: 200px;
+          height: 100px;
+          background-color: var(--bg-white);
+          border-radius: 6px;
+          position: absolute;
+          left: max(calc(200px * 8), 100%);
+          animation-name: scrollLeft;
+          animation-duration: 30s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          text-align: center;
+          align-content: center;
+        }
+
+        .skill1 {
+          animation-delay: calc(30s / 8 * (8 - 1) * -1);
+        }
+
+        .skill2 {
+          animation-delay: calc(30s / 8 * (8 - 2) * -1);
+        }
+
+        .skill3 {
+          animation-delay: calc(30s / 8 * (8 - 3) * -1);
+        }
+
+        .skill4 {
+          animation-delay: calc(30s / 8 * (8 - 4) * -1);
+        }
+
+        .skill5 {
+          animation-delay: calc(30s / 8 * (8 - 5) * -1);
+        }
+
+        .skill6 {
+          animation-delay: calc(30s / 8 * (8 - 6) * -1);
+        }
+
+        .skill7 {
+          animation-delay: calc(30s / 8 * (8 - 7) * -1);
+        }
+
+        .skill8 {
+          animation-delay: calc(30s / 8 * (8 - 8) * -1);
+        }
+
+        /* skill detail */
+        .skill img {
+            width: 80px;
+            height: 80px;
+        }
+        
+      </style>
 
 </head>
 <body>

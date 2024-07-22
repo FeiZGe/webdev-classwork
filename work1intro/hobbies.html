@@ -11,10 +11,272 @@
     <title>Hobbies</title>
 
     <!-- LINK -->
-    <link rel="stylesheet" href="./style/hobbies.css">
-    <link rel="stylesheet" href="./style/main.css">
-    <!-- font-awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <style>
+        :root {
+          --blue: rgb(49, 133, 252);
+          --white: rgb(255, 255, 255);
+          --bg-white: rgb(243, 248, 251);
+          --grey: rgba(0, 0, 0, 0.5);
+          --bg-font: rgb(59 130 246 / 0.2);
+          --font: rgb(6, 31, 80);
+        }
+        
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+  
+        body {
+          background-color: var(--bg-white);
+          font-family: "Inter", sans-serif;
+          color: var(--font);
+        }
+  
+        .container {
+          max-width: 1140px;
+          margin: 0 auto;
+        }
+  
+        /* Header */
+  
+        header {
+          background-color: var(--bg-white);
+        }
+  
+        /* nav bar */
+        .logo {
+          margin: 0 0.1rem;
+  
+          a {
+            padding: 1rem;
+            border-radius: 0.8rem;
+            text-decoration: none;
+            color: var(--font);
+            font-weight: 600;
+          }
+        }
+  
+        .nav-con {
+          display: flex;
+          justify-content: space-between;
+          height: 60px;
+          align-items: center;
+          margin: 0 1rem;
+          position: relative;
+        }
+  
+        .menu {
+          display: flex;
+          list-style: none;
+  
+          li {
+            margin: auto 0.1rem;
+  
+            a {
+              padding: 1rem;
+              border-radius: 0.8rem;
+              text-decoration: none;
+              color: var(--font);
+              transition: all .3s ease;
+            }
+          }
+        }
+  
+        /* nav animated */
+        .menu li a:hover {
+          background-color: var(--bg-font);
+          cursor: pointer;
+        }
+  
+        .logo a:hover {
+          background-color: var(--bg-font);
+          cursor: pointer;
+        }
+  
+        /* responsive navbar */
+        .ham-menu {
+          display: inline-block;
+          cursor: pointer;
+          position: absolute;
+          right: 0;
+          top: .5rem;
+        }
+  
+        .bar1,
+        .bar2,
+        .bar3 {
+          width: 25px;
+          height: 4px;
+          border-radius: 10px;
+          background-color: var(--font);
+          margin: 6px 0;
+          transition: 0.4s;
+        }
+  
+        /* Rotate first bar */
+        .change .bar1 {
+          transform: translate(0, 10px) rotate(-45deg);
+        }
+  
+        /* Fade out the second bar */
+        .change .bar2 {
+          opacity: 0;
+        }
+  
+        /* Rotate last bar */
+        .change .bar3 {
+          transform: translate(0, -10px) rotate(45deg);
+        }
+  
+        @media only screen and (min-width: 630px) {
+            .ham-menu {
+                display: none;
+            }
+        }
+  
+        @media only screen and (max-width: 630px) {
+            .menu {
+                display: none;
+                background-color: var(--blue);
+                width: 100%;
+                border-radius: 10px;
+                margin: 1rem 0;
+            }
+  
+            .menu li {
+                margin: 1.5rem 0;
+            }
+  
+            .menu li a {
+                color: white;
+                margin: 0 .5rem;
+            }
+  
+            .menu li a:hover {
+                background-color: white;
+                color: var(--font);
+            }
+  
+            .menu-active {
+                display: block;
+            }
+  
+            .nav-con {
+                height: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.2rem;
+            }
+        }
+  
+        /* main */
+        main {
+          padding: 2rem 0;
+        }
+  
+        /* Footer */
+        footer {
+          text-align: center;
+          padding: 1.5rem;
+  
+          p {
+            color: var(--font);
+            opacity: 0.4;
+          }
+        }
+  
+        /* Button */
+        .btn {
+          text-decoration: none;
+          border-style: none;
+          background-color: var(--blue);
+          padding: 0.8rem;
+          border-radius: 10px;
+          color: var(--white);
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          cursor: pointer;
+        }
+  
+        /* animated */
+        .btn:hover {
+          background-color: var(--white);
+          color: var(--font);
+          border-style: solid;
+          border-color: var(--blue);
+        }
+  
+        .btn:focus {
+          background-color: var(--blue);
+        }
+
+        .hobby-container {
+            container-type: inline-size;
+            margin:0 1rem;
+        }
+
+        /* wrap */
+        .hobby-wrap {
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:1rem;
+            margin:1rem 0;
+            justify-items: center;
+            align-items: center;
+        }
+
+        /* card */
+        .hobby-item {
+            border-radius: 20px;
+            transition: all .3s ease;
+            background-color: var(--white);
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+            text-align: center;
+            align-content: center;
+            overflow:hidden;
+            padding: 1rem;
+            display:grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+
+            .hobby-item-icon {
+                margin: .5rem 0;
+            }
+
+            .hobby-item-name {
+                font-weight: 600;
+                font-size: 1.5rem;
+            }
+        }
+
+        .hobby-item:hover {
+            background-color: var(--blue);
+            box-shadow: 0px 0px 30px 1px var(--blue);
+            color: var(--white);
+            transition: 0.5s;
+        }
+
+        /* Responsive */
+        @container (width<=600px) {
+          .hobby-wrap {
+            grid-template-columns:1fr;
+          }
+          .hobby-item {
+            grid-template-columns:1fr 1fr;
+            padding:.5rem;
+            align-items:center;
+            gap:1rem;
+
+            .hobby-item-name {
+                font-size:1.2rem;
+              }
+          }
+        }
+        
+      </style>
 
 </head>
 <body>
